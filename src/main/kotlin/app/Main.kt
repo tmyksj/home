@@ -2,6 +2,8 @@ package app
 
 import app.page.dom.home
 import app.page.dom.notFound
+import kotlinx.browser.document
+import kotlinx.browser.window
 import kotlinx.css.*
 import kotlinx.css.properties.LineHeight
 import kotlinx.css.properties.TextDecoration
@@ -12,8 +14,6 @@ import react.dom.render
 import react.router.dom.browserRouter
 import react.router.dom.route
 import react.router.dom.switch
-import kotlin.browser.document
-import kotlin.browser.window
 
 fun main() {
     window.addEventListener("DOMContentLoaded", {
