@@ -1,11 +1,16 @@
 package app.page.home
 
-import app.component.dom.repository
+import app.component.dom.bookList
+import app.component.dom.repositoryList
+import app.support.css.Color
+import app.support.css.Layout
 import kotlinx.css.*
 import react.RBuilder
 import react.RComponent
 import react.dom.a
 import react.dom.li
+import react.dom.section
+import react.router.dom.routeLink
 import styled.*
 
 class Home : RComponent<HomeRProps, HomeRState>() {
@@ -15,7 +20,7 @@ class Home : RComponent<HomeRProps, HomeRState>() {
             css {
                 alignItems = Align.center
                 display = Display.flex
-                height = 80.vh
+                height = 90.vh
                 justifyContent = JustifyContent.center
             }
 
@@ -50,7 +55,7 @@ class Home : RComponent<HomeRProps, HomeRState>() {
 
                         li {
                             a {
-                                attrs.href = "https://atcoder.jp/users/tmyksj"
+                                attrs.href = "//atcoder.jp/users/tmyksj"
                                 attrs.rel = "nofollow noreferrer noopener"
                                 attrs.target = "_blank"
                                 +"atcoder"
@@ -58,7 +63,7 @@ class Home : RComponent<HomeRProps, HomeRState>() {
                         }
                         li {
                             a {
-                                attrs.href = "https://facebook.com/tmyksj"
+                                attrs.href = "//facebook.com/tmyksj"
                                 attrs.rel = "nofollow noreferrer noopener"
                                 attrs.target = "_blank"
                                 +"facebook"
@@ -66,7 +71,7 @@ class Home : RComponent<HomeRProps, HomeRState>() {
                         }
                         li {
                             a {
-                                attrs.href = "https://github.com/tmyksj"
+                                attrs.href = "//github.com/tmyksj"
                                 attrs.rel = "nofollow noreferrer noopener"
                                 attrs.target = "_blank"
                                 +"github"
@@ -74,7 +79,7 @@ class Home : RComponent<HomeRProps, HomeRState>() {
                         }
                         li {
                             a {
-                                attrs.href = "https://twitter.com/tmyksj"
+                                attrs.href = "//twitter.com/tmyksj"
                                 attrs.rel = "nofollow noreferrer noopener"
                                 attrs.target = "_blank"
                                 +"twitter"
@@ -85,7 +90,7 @@ class Home : RComponent<HomeRProps, HomeRState>() {
 
                 styledImg {
                     css {
-                        borderColor = Color("#d2d0ce")
+                        borderColor = Color.neutralTertiaryAlt
                         borderRadius = 50.pct
                         borderStyle = BorderStyle.solid
                         borderWidth = 1.px
@@ -100,66 +105,83 @@ class Home : RComponent<HomeRProps, HomeRState>() {
 
         styledSection {
             css {
-                backgroundColor = Color("#201f1e")
-                color = Color("#faf9f8")
-                margin(vertical = 10.vh, horizontal = 0.rem)
+                backgroundColor = Color.neutralDark
+                color = Color.neutralLighter
             }
 
             styledDiv {
                 css {
                     margin(vertical = 0.rem, horizontal = LinearDimension.auto)
-                    maxWidth = 80.rem
+                    maxWidth = Layout.extraLarge
                     padding(vertical = 10.vh, horizontal = 1.rem)
                 }
 
                 styledH1 {
                     css {
                         fontSize = 1.5.rem
-                        margin(vertical = 1.rem, horizontal = 0.rem)
+                        marginBottom = 0.5.rem
+                        marginTop = 1.rem
                     }
 
-                    +"Repositories"
-                }
-
-                styledDiv {
-                    css {
-                        margin(vertical = 3.rem, horizontal = 0.rem)
-                    }
-
-                    repository {
-                        attrs.description = "競技プログラミングの参考情報"
-                        attrs.hrefDeploy = "https://tmyksj.github.io/refkyopro"
-                        attrs.hrefGitHub = "https://github.com/tmyksj/refkyopro"
-                        attrs.repositoryName = "refkyopro"
-                        attrs.srcImg = "assets/refkyopro.png"
+                    routeLink(to = "/repositories") {
+                        styledSpan {
+                            css {
+                                color = Color.neutralLighter
+                            }
+                            +"Repositories"
+                        }
                     }
                 }
 
-                styledDiv {
+                styledP {
                     css {
-                        margin(vertical = 3.rem, horizontal = 0.rem)
+                        margin(vertical = 0.5.rem, horizontal = 0.rem)
                     }
 
-                    repository {
-                        attrs.description = "やってみたいことを可視化して、何をするかを決めやすく、何をしたか把握しやすく"
-                        attrs.hrefDeploy = "https://tmyksj.github.io/try-vis"
-                        attrs.hrefGitHub = "https://github.com/tmyksj/try-vis"
-                        attrs.repositoryName = "try-vis"
-                        attrs.srcImg = "assets/try-vis.png"
+                    +"個人で開発しているソフトウェアのリポジトリです。"
+                }
+
+                repositoryList {
+                    attrs.n = 3
+                }
+            }
+        }
+
+        section {
+            styledDiv {
+                css {
+                    margin(vertical = 0.rem, horizontal = LinearDimension.auto)
+                    maxWidth = Layout.extraLarge
+                    padding(vertical = 10.vh, horizontal = 1.rem)
+                }
+
+                styledH1 {
+                    css {
+                        fontSize = 1.5.rem
+                        marginBottom = 0.5.rem
+                        marginTop = 1.rem
+                    }
+
+                    routeLink(to = "/books") {
+                        styledSpan {
+                            css {
+                                color = Color.neutralPrimary
+                            }
+                            +"Books"
+                        }
                     }
                 }
 
-                styledDiv {
+                styledP {
                     css {
-                        margin(vertical = 3.rem, horizontal = 0.rem)
+                        margin(vertical = 0.5.rem, horizontal = 0.rem)
                     }
 
-                    repository {
-                        attrs.description = "ywt を書く日記"
-                        attrs.hrefGitHub = "https://github.com/tmyksj/ywtdiary"
-                        attrs.repositoryName = "ywtdiary"
-                        attrs.srcImg = "assets/ywtdiary.png"
-                    }
+                    +"これまでに読んだ本のリストです。"
+                }
+
+                bookList {
+                    attrs.n = 3
                 }
             }
         }

@@ -1,7 +1,10 @@
 package app
 
+import app.page.dom.bookList
 import app.page.dom.home
 import app.page.dom.notFound
+import app.page.dom.repositoryList
+import app.support.css.Color
 import kotlinx.browser.document
 import kotlinx.browser.window
 import kotlinx.css.*
@@ -22,13 +25,17 @@ fun main() {
                 unsafe {
                     raw(CSSBuilder().apply {
                         rule("a") {
-                            color = Color("#004578")
+                            color = Color.themeDarkAlt
                             textDecoration = TextDecoration.none
                         }
 
+                        rule("a:hover") {
+                            color = Color.themeDarker
+                        }
+
                         rule("body") {
-                            backgroundColor = Color("#faf9f8")
-                            color = Color("#201f1e")
+                            backgroundColor = Color.neutralLighter
+                            color = Color.neutralPrimary
                             fontFamily =
                                 "'Segoe UI', SegoeUI, 'Yu Gothic UI', 'Meiryo UI', 'Helvetica Neue', Helvetica, Arial, sans-serif"
                             lineHeight = LineHeight("1.4")
@@ -47,6 +54,8 @@ fun main() {
 
                 switch {
                     route(path = "/", exact = true) { home { } }
+                    route(path = "/books", exact = true) { bookList { } }
+                    route(path = "/repositories", exact = true) { repositoryList { } }
                     route(path = "/") { notFound { } }
                 }
             }
