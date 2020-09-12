@@ -1,6 +1,7 @@
 package app.page.bookList
 
 import app.component.dom.bookList
+import app.component.dom.defaultHeader
 import app.support.css.Layout
 import kotlinx.css.*
 import react.RBuilder
@@ -13,6 +14,8 @@ import styled.styledSection
 class BookList : RComponent<BookListRProps, BookListRState>() {
 
     override fun RBuilder.render() {
+        defaultHeader { }
+
         styledSection {
             css {
                 margin(vertical = 4.rem, horizontal = LinearDimension.auto)

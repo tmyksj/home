@@ -1,5 +1,6 @@
 package app.page.repositoryList
 
+import app.component.dom.defaultHeader
 import app.component.dom.repositoryList
 import app.support.css.Layout
 import kotlinx.css.*
@@ -13,6 +14,8 @@ import styled.styledSection
 class RepositoryList : RComponent<RepositoryListRProps, RepositoryListRState>() {
 
     override fun RBuilder.render() {
+        defaultHeader { }
+
         styledSection {
             css {
                 margin(vertical = 4.rem, horizontal = LinearDimension.auto)
