@@ -2,6 +2,15 @@
   "books": [
     {
       "authors": [
+        "山端宏実, 岡部一詩, 中田敦, 大和田尚孝, 谷島宣之 著"
+      ],
+      "hrefNdl": "https://ndlonline.ndl.go.jp/#!/detail/R300000001-I030228268-00",
+      "hrefOfficial": "https://www.nikkeibp.co.jp/atclpubmkt/book/20/277410",
+      "isbn": "978-4-296-10535-9",
+      "title": "みずほ銀行システム統合、苦闘の19年史 : 史上最大のITプロジェクト「3度目の正直」"
+    },
+    {
+      "authors": [
         "結城浩 著"
       ],
       "hrefNdl": "https://ndlonline.ndl.go.jp/#!/detail/R300000001-I028740598-00",
