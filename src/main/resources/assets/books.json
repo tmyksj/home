@@ -4,8 +4,8 @@
       "authors": [
         "結城浩 著"
       ],
-      "hrefNdl": "//ndlonline.ndl.go.jp/#!/detail/R300000001-I028740598-00",
-      "hrefOfficial": "//www.sbcr.jp/product/4797395457",
+      "hrefNdl": "https://ndlonline.ndl.go.jp/#!/detail/R300000001-I028740598-00",
+      "hrefOfficial": "https://www.sbcr.jp/product/4797395457",
       "isbn": "978-4-7973-9545-7",
       "title": "プログラマの数学"
     },
@@ -14,8 +14,8 @@
         "David Scott Bernstein 著",
         "吉羽龍太郎, 永瀬美穂, 原田騎郎, 有野雅士 訳"
       ],
-      "hrefNdl": "//ndlonline.ndl.go.jp/#!/detail/R300000001-I029937746-00",
-      "hrefOfficial": "//www.oreilly.co.jp/books/9784873118864",
+      "hrefNdl": "https://ndlonline.ndl.go.jp/#!/detail/R300000001-I029937746-00",
+      "hrefOfficial": "https://www.oreilly.co.jp/books/9784873118864",
       "isbn": "978-4-87311-886-4",
       "title": "レガシーコードからの脱却 : ソフトウェアの寿命を延ばし価値を高める9つのプラクティス"
     },
@@ -23,8 +23,8 @@
       "authors": [
         "西尾泰和 著"
       ],
-      "hrefNdl": "//ndlonline.ndl.go.jp/#!/detail/R300000001-I029123555-00",
-      "hrefOfficial": "//gihyo.jp/book/2018/978-4-7741-9876-7",
+      "hrefNdl": "https://ndlonline.ndl.go.jp/#!/detail/R300000001-I029123555-00",
+      "hrefOfficial": "https://gihyo.jp/book/2018/978-4-7741-9876-7",
       "isbn": "978-4-7741-9876-7",
       "title": "エンジニアの知的生産術 : 効率的に学び、整理し、アウトプットする"
     },
@@ -32,8 +32,8 @@
       "authors": [
         "青山公士 著"
       ],
-      "hrefNdl": "//ndlonline.ndl.go.jp/#!/detail/R300000001-I029311049-00",
-      "hrefOfficial": "//gihyo.jp/book/2018/978-4-297-10174-9",
+      "hrefNdl": "https://ndlonline.ndl.go.jp/#!/detail/R300000001-I029311049-00",
+      "hrefOfficial": "https://gihyo.jp/book/2018/978-4-297-10174-9",
       "isbn": "978-4-297-10174-9",
       "title": "ドラゴンクエスト10を支える技術 : 大規模オンラインRPGの舞台裏"
     },
@@ -42,8 +42,8 @@
         "Dustin Boswell, Trevor Foucher 著",
         "角征典 訳"
       ],
-      "hrefNdl": "//ndlonline.ndl.go.jp/#!/detail/R300000001-I023737539-00",
-      "hrefOfficial": "//www.oreilly.co.jp/books/9784873115658",
+      "hrefNdl": "https://ndlonline.ndl.go.jp/#!/detail/R300000001-I023737539-00",
+      "hrefOfficial": "https://www.oreilly.co.jp/books/9784873115658",
       "isbn": "978-4-87311-565-8",
       "title": "リーダブルコード : より良いコードを書くためのシンプルで実践的なテクニック"
     }

@@ -96,7 +96,7 @@ class BookList : RComponent<BookListRProps, BookListRState>() {
 
                             defaultButton {
                                 attrs.href = it
-                                attrs.rel = "noreferrer noopener"
+                                attrs.rel = "nofollow noopener noreferrer"
                                 attrs.target = "_blank"
                                 +"National Diet Library"
                             }
@@ -112,7 +112,7 @@ class BookList : RComponent<BookListRProps, BookListRState>() {
 
                             primaryButton {
                                 attrs.href = it
-                                attrs.rel = "noreferrer noopener"
+                                attrs.rel = "nofollow noopener noreferrer"
                                 attrs.target = "_blank"
                                 +"Official Page"
                             }

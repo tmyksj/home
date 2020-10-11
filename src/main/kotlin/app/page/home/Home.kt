@@ -55,32 +55,32 @@ class Home : RComponent<HomeRProps, HomeRState>() {
 
                         li {
                             a {
-                                attrs.href = "//atcoder.jp/users/tmyksj"
-                                attrs.rel = "nofollow noreferrer noopener"
+                                attrs.href = "https://atcoder.jp/users/tmyksj"
+                                attrs.rel = "nofollow noopener noreferrer"
                                 attrs.target = "_blank"
                                 +"atcoder"
                             }
                         }
                         li {
                             a {
-                                attrs.href = "//facebook.com/tmyksj"
-                                attrs.rel = "nofollow noreferrer noopener"
+                                attrs.href = "https://facebook.com/tmyksj"
+                                attrs.rel = "nofollow noopener noreferrer"
                                 attrs.target = "_blank"
                                 +"facebook"
                             }
                         }
                         li {
                             a {
-                                attrs.href = "//github.com/tmyksj"
-                                attrs.rel = "nofollow noreferrer noopener"
+                                attrs.href = "https://github.com/tmyksj"
+                                attrs.rel = "nofollow noopener noreferrer"
                                 attrs.target = "_blank"
                                 +"github"
                             }
                         }
                         li {
                             a {
-                                attrs.href = "//twitter.com/tmyksj"
-                                attrs.rel = "nofollow noreferrer noopener"
+                                attrs.href = "https://twitter.com/tmyksj"
+                                attrs.rel = "nofollow noopener noreferrer"
                                 attrs.target = "_blank"
                                 +"twitter"
                             }

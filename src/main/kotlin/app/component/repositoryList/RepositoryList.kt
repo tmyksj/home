@@ -119,7 +119,7 @@ class RepositoryList : RComponent<RepositoryListRProps, RepositoryListRState>() 
 
                                     defaultButton {
                                         attrs.href = it
-                                        attrs.rel = "noreferrer noopener"
+                                        attrs.rel = "nofollow noopener noreferrer"
                                         attrs.target = "_blank"
                                         +"GitHub"
                                     }
@@ -135,7 +135,7 @@ class RepositoryList : RComponent<RepositoryListRProps, RepositoryListRState>() 
 
                                     primaryButton {
                                         attrs.href = it
-                                        attrs.rel = "noreferrer noopener"
+                                        attrs.rel = "nofollow noopener noreferrer"
                                         attrs.target = "_blank"
                                         +"Open"
                                     }
