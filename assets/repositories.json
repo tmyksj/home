@@ -2,22 +2,22 @@
   "repositories": [
     {
       "description": "競技プログラミングの参考情報",
-      "hrefDeploy": "//tmyksj.github.io/refkyopro",
-      "hrefGitHub": "//github.com/tmyksj/refkyopro",
+      "hrefDeploy": "https://tmyksj.github.io/refkyopro",
+      "hrefGitHub": "https://github.com/tmyksj/refkyopro",
       "imgSrc": "assets/repositories/refkyopro.png",
       "name": "refkyopro"
     },
     {
       "description": "やってみたいことを可視化して、何をするかを決めやすく、何をしたか把握しやすく",
-      "hrefDeploy": "//tmyksj.github.io/try-vis",
-      "hrefGitHub": "//github.com/tmyksj/try-vis",
+      "hrefDeploy": "https://tmyksj.github.io/try-vis",
+      "hrefGitHub": "https://github.com/tmyksj/try-vis",
       "imgSrc": "assets/repositories/try-vis.png",
       "name": "try-vis"
     },
     {
       "description": "ywt を書く日記",
       "hrefDeploy": null,
-      "hrefGitHub": "//github.com/tmyksj/ywtdiary",
+      "hrefGitHub": "https://github.com/tmyksj/ywtdiary",
       "imgSrc": "assets/repositories/ywtdiary.png",
       "name": "ywtdiary"
     }
