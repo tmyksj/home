@@ -2,8 +2,8 @@ package app.component.repositoryList
 
 import app.component.dom.defaultButton
 import app.component.dom.primaryButton
-import app.domain.repository.RepositoryDomain
-import app.domain.repository.dto.RepositoryDto
+import app.dto.RepositoryDto
+import app.service.RepositoryService
 import app.support.css.Color
 import app.support.css.Layout
 import kotlinx.coroutines.CoroutineScope
@@ -22,7 +22,7 @@ class RepositoryList : RComponent<RepositoryListRProps, RepositoryListRState>() 
         val coroutineScope: CoroutineScope = MainScope()
 
         coroutineScope.launch {
-            val dtoList: List<RepositoryDto> = RepositoryDomain().fetchAll()
+            val dtoList: List<RepositoryDto> = RepositoryService().fetchAll()
             setState {
                 repositoryDtoList = dtoList
             }

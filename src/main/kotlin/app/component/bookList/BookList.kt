@@ -2,8 +2,8 @@ package app.component.bookList
 
 import app.component.dom.defaultButton
 import app.component.dom.primaryButton
-import app.domain.book.BookDomain
-import app.domain.book.dto.BookDto
+import app.dto.BookDto
+import app.service.BookService
 import app.support.css.Color
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.MainScope
@@ -21,7 +21,7 @@ class BookList : RComponent<BookListRProps, BookListRState>() {
         val coroutineScope: CoroutineScope = MainScope()
 
         coroutineScope.launch {
-            val dtoList: List<BookDto> = BookDomain().fetchAll()
+            val dtoList: List<BookDto> = BookService().fetchAll()
             setState {
                 bookDtoList = dtoList
             }

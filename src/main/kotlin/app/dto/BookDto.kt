@@ -1,4 +1,4 @@
-package app.domain.book.dto
+package app.dto
 
 data class BookDto(
 

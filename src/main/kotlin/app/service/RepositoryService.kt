@@ -1,11 +1,11 @@
-package app.domain.repository
+package app.service
 
-import app.domain.repository.dto.RepositoryDto
+import app.dto.RepositoryDto
 import kotlinx.browser.window
 import kotlinx.coroutines.await
 import org.w3c.fetch.Response
 
-class RepositoryDomain {
+class RepositoryService {
 
     suspend fun fetchAll(): List<RepositoryDto> {
         val response: Response = window.fetch("assets/repositories.json").await()

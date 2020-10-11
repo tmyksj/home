@@ -1,4 +1,4 @@
-package app.domain.repository.dto
+package app.dto
 
 data class RepositoryDto(
 

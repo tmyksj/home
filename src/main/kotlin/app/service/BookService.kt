@@ -1,11 +1,11 @@
-package app.domain.book
+package app.service
 
-import app.domain.book.dto.BookDto
+import app.dto.BookDto
 import kotlinx.browser.window
 import kotlinx.coroutines.await
 import org.w3c.fetch.Response
 
-class BookDomain {
+class BookService {
 
     suspend fun fetchAll(): List<BookDto> {
         val response: Response = window.fetch("assets/books.json").await()
