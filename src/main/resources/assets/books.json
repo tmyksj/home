@@ -2,6 +2,15 @@
   "books": [
     {
       "authors": [
+        "成瀬允宣 著"
+      ],
+      "hrefNdl": "https://ndlonline.ndl.go.jp/#!/detail/R300000001-I030221540-00",
+      "hrefOfficial": "https://www.shoeisha.co.jp/book/detail/9784798150727",
+      "isbn": "978-4-7981-5072-7",
+      "title": "ドメイン駆動設計入門 : ボトムアップでわかる!ドメイン駆動設計の基本"
+    },
+    {
+      "authors": [
         "山端宏実, 岡部一詩, 中田敦, 大和田尚孝, 谷島宣之 著"
       ],
       "hrefNdl": "https://ndlonline.ndl.go.jp/#!/detail/R300000001-I030228268-00",
