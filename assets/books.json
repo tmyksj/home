@@ -2,6 +2,15 @@
   "books": [
     {
       "authors": [
+        "藤井保文 著"
+      ],
+      "hrefNdl": "https://ndlonline.ndl.go.jp/#!/detail/R300000001-I030514532-00",
+      "hrefOfficial": "https://www.nikkeibp.co.jp/atclpubmkt/book/20/278990/",
+      "isbn": "978-4-296-10631-8",
+      "title": "アフターデジタル = AFTER DIGITAL"
+    },
+    {
+      "authors": [
         "成瀬允宣 著"
       ],
       "hrefNdl": "https://ndlonline.ndl.go.jp/#!/detail/R300000001-I030221540-00",
