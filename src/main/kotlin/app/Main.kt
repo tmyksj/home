@@ -53,10 +53,10 @@ fun main() {
                 }
 
                 switch {
-                    route(path = "/", exact = true) { home { } }
-                    route(path = "/books", exact = true) { bookList { } }
-                    route(path = "/repositories", exact = true) { repositoryList { } }
-                    route(path = "/") { notFound { } }
+                    route(path = arrayOf("/"), exact = true) { home { } }
+                    route(path = arrayOf("/books"), exact = true) { bookList { } }
+                    route(path = arrayOf("/repositories"), exact = true) { repositoryList { } }
+                    route(path = arrayOf("/")) { notFound { } }
                 }
             }
         }
