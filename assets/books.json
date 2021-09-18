@@ -2,6 +2,53 @@
   "books": [
     {
       "authors": [
+        "Michael Keeling 著",
+        "島田浩二 訳"
+      ],
+      "hrefNdl": "https://ndlonline.ndl.go.jp/#!/detail/R300000001-I030070331-00",
+      "hrefOfficial": "https://www.oreilly.co.jp/books/9784873118956/",
+      "isbn": "978-4-87311-895-6",
+      "title": "Design It! : プログラマーのためのアーキテクティング入門"
+    },
+    {
+      "authors": [
+        "Kent Beck 著",
+        "和田卓人 訳"
+      ],
+      "hrefNdl": "https://ndlonline.ndl.go.jp/#!/detail/R300000001-I028547257-00",
+      "hrefOfficial": "https://www.ohmsha.co.jp/book/9784274217883/",
+      "isbn": "978-4-274-21788-3",
+      "title": "テスト駆動開発"
+    },
+    {
+      "authors": [
+        "山下光洋, 海老原寛之 著"
+      ],
+      "hrefNdl": "https://ndlonline.ndl.go.jp/#!/detail/R300000001-I029626944-00",
+      "hrefOfficial": "https://www.sbcr.jp/product/4797397406/",
+      "isbn": "978-4-7973-9740-6",
+      "title": "AWS認定クラウドプラクティショナー"
+    },
+    {
+      "authors": [
+        "小笠原種高 著"
+      ],
+      "hrefNdl": "https://ndlonline.ndl.go.jp/#!/detail/R300000001-I030034449-00",
+      "hrefOfficial": "https://gihyo.jp/book/2019/978-4-297-10889-2",
+      "isbn": "978-4-297-10889-2",
+      "title": "Amazon Web Servicesのしくみと技術がこれ1冊でしっかりわかる教科書"
+    },
+    {
+      "authors": [
+        "東京大学教養学部統計学教室 編"
+      ],
+      "hrefNdl": "https://ndlonline.ndl.go.jp/#!/detail/R300000001-I000002123507-00",
+      "hrefOfficial": "http://www.utp.or.jp/book/b300857.html",
+      "isbn": "978-4-13-042065-5",
+      "title": "基礎統計学"
+    },
+    {
+      "authors": [
         "藤井保文 著"
       ],
       "hrefNdl": "https://ndlonline.ndl.go.jp/#!/detail/R300000001-I030514532-00",
