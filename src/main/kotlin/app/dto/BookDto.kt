@@ -2,14 +2,14 @@ package app.dto
 
 data class BookDto(
 
-    var authorList: List<String>?,
+    val isbn: String,
 
-    var hrefNdl: String?,
+    val title: String,
 
-    var hrefOfficial: String?,
+    val authorList: List<String>,
 
-    var isbn: String?,
+    val hrefNdl: String,
 
-    var title: String?,
+    val hrefOfficial: String?,
 
     )

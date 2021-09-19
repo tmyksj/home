@@ -36,9 +36,7 @@ class RepositoryList : RComponent<RepositoryListRProps, RepositoryListRState>() 
                     margin(vertical = 3.rem, horizontal = 0.rem)
                 }
 
-                it.name?.let {
-                    key = it
-                }
+                key = it.name
 
                 styledDiv {
                     css {
@@ -62,19 +60,17 @@ class RepositoryList : RComponent<RepositoryListRProps, RepositoryListRState>() 
                             }
                         }
 
-                        it.imgSrc?.let {
-                            styledImg {
-                                css {
-                                    borderColor = Color.neutralTertiaryAlt
-                                    borderStyle = BorderStyle.solid
-                                    borderWidth = 1.px
-                                    display = Display.block
-                                    width = 100.pct
-                                }
-
-                                attrs.alt = "social preview"
-                                attrs.src = it
+                        styledImg {
+                            css {
+                                borderColor = Color.neutralTertiaryAlt
+                                borderStyle = BorderStyle.solid
+                                borderWidth = 1.px
+                                display = Display.block
+                                width = 100.pct
                             }
+
+                            attrs.alt = "social preview"
+                            attrs.src = it.imgSrc
                         }
                     }
 
@@ -88,41 +84,35 @@ class RepositoryList : RComponent<RepositoryListRProps, RepositoryListRState>() 
                             }
                         }
 
-                        it.name?.let {
-                            styledH2 {
-                                css {
-                                    fontSize = 1.2.rem
-                                    marginBottom = 0.5.rem
-                                    marginTop = 0.rem
-                                }
-
-                                +it
+                        styledH2 {
+                            css {
+                                fontSize = 1.2.rem
+                                marginBottom = 0.5.rem
+                                marginTop = 0.rem
                             }
+
+                            +it.name
                         }
 
-                        it.description?.let {
-                            styledP {
-                                css {
-                                    margin(vertical = 0.5.rem, horizontal = 0.rem)
-                                }
-
-                                +it
+                        styledP {
+                            css {
+                                margin(vertical = 0.5.rem, horizontal = 0.rem)
                             }
+
+                            +it.description
                         }
 
                         div {
-                            it.hrefGitHub?.let {
-                                styledDiv {
-                                    css {
-                                        display = Display.inlineBlock
-                                    }
+                            styledDiv {
+                                css {
+                                    display = Display.inlineBlock
+                                }
 
-                                    defaultButton {
-                                        attrs.href = it
-                                        attrs.rel = "nofollow noopener noreferrer"
-                                        attrs.target = "_blank"
-                                        +"GitHub"
-                                    }
+                                defaultButton {
+                                    attrs.href = it.hrefGitHub
+                                    attrs.rel = "nofollow noopener noreferrer"
+                                    attrs.target = "_blank"
+                                    +"GitHub"
                                 }
                             }
 

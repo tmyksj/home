@@ -36,8 +36,16 @@ fun main() {
                         rule("body") {
                             backgroundColor = Color.neutralLighter
                             color = Color.neutralPrimary
-                            fontFamily =
-                                "'Segoe UI', SegoeUI, 'Yu Gothic UI', 'Meiryo UI', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+                            fontFamily = listOf(
+                                "Segoe UI",
+                                "SegoeUI",
+                                "Yu Gothic UI",
+                                "Meiryo UI",
+                                "Helvetica Neue",
+                                "Helvetica",
+                                "Arial",
+                                "sans-serif",
+                            ).joinToString()
                             lineHeight = LineHeight("1.4")
                             margin(all = 0.rem)
                         }
@@ -47,11 +55,7 @@ fun main() {
         }
 
         render(document.querySelector("#root")) {
-            browserRouter {
-                document.head?.querySelector("base")?.getAttribute("href")?.let {
-                    attrs.asDynamic().basename = it
-                }
-
+            browserRouter(basename = document.head?.querySelector("base")?.getAttribute("href") ?: "") {
                 switch {
                     route(path = arrayOf("/"), exact = true) { home { } }
                     route(path = arrayOf("/books"), exact = true) { bookList { } }

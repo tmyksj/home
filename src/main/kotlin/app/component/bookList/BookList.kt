@@ -35,8 +35,32 @@ class BookList : RComponent<BookListRProps, BookListRState>() {
                     margin(vertical = 3.rem, horizontal = 0.rem)
                 }
 
-                it.title?.let {
-                    key = it
+                key = it.title
+
+                styledDiv {
+                    css {
+                        marginBottom = 0.5.rem
+                    }
+
+                    styledH2 {
+                        css {
+                            display = Display.inline
+                            fontSize = 1.2.rem
+                            margin(all = 0.rem)
+                        }
+
+                        +it.title
+                    }
+
+                    styledSpan {
+                        css {
+                            color = Color.neutralSecondary
+                            fontSize = 0.8.rem
+                            marginLeft = 1.rem
+                        }
+
+                        +"ISBN ${it.isbn}"
+                    }
                 }
 
                 styledDiv {
@@ -44,37 +68,7 @@ class BookList : RComponent<BookListRProps, BookListRState>() {
                         marginBottom = 0.5.rem
                     }
 
-                    it.title?.let {
-                        styledH2 {
-                            css {
-                                display = Display.inline
-                                fontSize = 1.2.rem
-                                margin(all = 0.rem)
-                            }
-
-                            +it
-                        }
-                    }
-
-                    it.isbn?.let {
-                        styledSpan {
-                            css {
-                                color = Color.neutralSecondary
-                                fontSize = 0.8.rem
-                                marginLeft = 1.rem
-                            }
-
-                            +"ISBN $it"
-                        }
-                    }
-                }
-
-                styledDiv {
-                    css {
-                        marginBottom = 0.5.rem
-                    }
-
-                    it.authorList?.forEach {
+                    it.authorList.forEach {
                         styledP {
                             css {
                                 color = Color.neutralSecondary
@@ -88,18 +82,16 @@ class BookList : RComponent<BookListRProps, BookListRState>() {
                 }
 
                 div {
-                    it.hrefNdl?.let {
-                        styledDiv {
-                            css {
-                                display = Display.inlineBlock
-                            }
+                    styledDiv {
+                        css {
+                            display = Display.inlineBlock
+                        }
 
-                            defaultButton {
-                                attrs.href = it
-                                attrs.rel = "nofollow noopener noreferrer"
-                                attrs.target = "_blank"
-                                +"National Diet Library"
-                            }
+                        defaultButton {
+                            attrs.href = it.hrefNdl
+                            attrs.rel = "nofollow noopener noreferrer"
+                            attrs.target = "_blank"
+                            +"National Diet Library"
                         }
                     }
 

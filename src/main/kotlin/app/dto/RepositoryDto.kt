@@ -2,14 +2,14 @@ package app.dto
 
 data class RepositoryDto(
 
-    var description: String?,
+    val name: String,
 
-    var hrefDeploy: String?,
+    val description: String,
 
-    var hrefGitHub: String?,
+    val imgSrc: String,
 
-    var imgSrc: String?,
+    val hrefGitHub: String,
 
-    var name: String?,
+    val hrefDeploy: String?,
 
     )

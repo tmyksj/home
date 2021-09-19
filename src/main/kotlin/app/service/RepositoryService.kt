@@ -14,11 +14,11 @@ class RepositoryService {
 
         return repositories.map {
             RepositoryDto(
-                description = it.description as String?,
+                name = it.name as String,
+                description = it.description as String,
+                imgSrc = it.imgSrc as String,
+                hrefGitHub = it.hrefGitHub as String,
                 hrefDeploy = it.hrefDeploy as String?,
-                hrefGitHub = it.hrefGitHub as String?,
-                imgSrc = it.imgSrc as String?,
-                name = it.name as String?,
             )
         }.toList()
     }
