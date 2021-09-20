@@ -1,6 +1,27 @@
 {
   "repositories": [
     {
+      "name": "vec",
+      "description": "virtual e-commerce",
+      "imgSrc": "assets/repositories/vec.png",
+      "hrefGitHub": "https://github.com/tmyksj/vec",
+      "hrefDeploy": null
+    },
+    {
+      "name": "tsuzuru",
+      "description": "日々を綴る。",
+      "imgSrc": "assets/repositories/tsuzuru.png",
+      "hrefGitHub": "https://github.com/tmyksj/tsuzuru",
+      "hrefDeploy": null
+    },
+    {
+      "name": "reversi-problem",
+      "description": "reversi problem",
+      "imgSrc": "assets/repositories/reversi-problem.png",
+      "hrefGitHub": "https://github.com/tmyksj/reversi-problem",
+      "hrefDeploy": "https://tmyksj.github.io/reversi-problem"
+    },
+    {
       "name": "refkyopro",
       "description": "競技プログラミングの参考情報",
       "imgSrc": "assets/repositories/refkyopro.png",
