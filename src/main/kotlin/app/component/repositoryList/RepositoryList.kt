@@ -1,11 +1,11 @@
 package app.component.repositoryList
 
+import app.css.Color
+import app.css.Layout
 import app.dto.RepositoryDto
 import app.js.fluentui.react.defaultButton
 import app.js.fluentui.react.primaryButton
 import app.service.RepositoryService
-import app.support.css.Color
-import app.support.css.Layout
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch

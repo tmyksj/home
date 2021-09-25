@@ -1,10 +1,10 @@
 package app
 
+import app.css.Color
 import app.page.dom.bookList
 import app.page.dom.home
 import app.page.dom.notFound
 import app.page.dom.repositoryList
-import app.support.css.Color
 import kotlinx.browser.document
 import kotlinx.browser.window
 import kotlinx.css.*

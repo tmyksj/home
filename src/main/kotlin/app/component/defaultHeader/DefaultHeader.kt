@@ -1,6 +1,6 @@
 package app.component.defaultHeader
 
-import app.support.css.Color
+import app.css.Color
 import kotlinx.css.*
 import react.RBuilder
 import react.RComponent

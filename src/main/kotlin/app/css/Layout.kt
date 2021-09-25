@@ -1,4 +1,4 @@
-package app.support.css
+package app.css
 
 import kotlinx.css.*
 

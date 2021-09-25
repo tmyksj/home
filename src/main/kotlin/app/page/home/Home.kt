@@ -2,8 +2,8 @@ package app.page.home
 
 import app.component.dom.bookList
 import app.component.dom.repositoryList
-import app.support.css.Color
-import app.support.css.Layout
+import app.css.Color
+import app.css.Layout
 import kotlinx.css.*
 import react.RBuilder
 import react.RComponent

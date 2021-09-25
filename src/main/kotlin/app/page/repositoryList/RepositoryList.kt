@@ -2,7 +2,7 @@ package app.page.repositoryList
 
 import app.component.dom.defaultHeader
 import app.component.dom.repositoryList
-import app.support.css.Layout
+import app.css.Layout
 import kotlinx.css.*
 import react.RBuilder
 import react.RComponent
