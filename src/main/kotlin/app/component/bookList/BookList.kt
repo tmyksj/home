@@ -1,8 +1,8 @@
 package app.component.bookList
 
-import app.component.dom.defaultButton
-import app.component.dom.primaryButton
 import app.dto.BookDto
+import app.js.fluentui.react.defaultButton
+import app.js.fluentui.react.primaryButton
 import app.service.BookService
 import app.support.css.Color
 import kotlinx.coroutines.CoroutineScope

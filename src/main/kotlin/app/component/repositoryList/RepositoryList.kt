@@ -1,8 +1,8 @@
 package app.component.repositoryList
 
-import app.component.dom.defaultButton
-import app.component.dom.primaryButton
 import app.dto.RepositoryDto
+import app.js.fluentui.react.defaultButton
+import app.js.fluentui.react.primaryButton
 import app.service.RepositoryService
 import app.support.css.Color
 import app.support.css.Layout
