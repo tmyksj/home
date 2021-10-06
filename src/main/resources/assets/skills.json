@@ -1,0 +1,112 @@
+{
+  "skills": [
+    {
+      "name": "Angular",
+      "knowledge": 1
+    },
+    {
+      "name": "AWS EC2",
+      "knowledge": 0
+    },
+    {
+      "name": "Bash",
+      "knowledge": 1
+    },
+    {
+      "name": "C",
+      "knowledge": 1
+    },
+    {
+      "name": "C++",
+      "knowledge": 1
+    },
+    {
+      "name": "CSS",
+      "knowledge": 2
+    },
+    {
+      "name": "Docker",
+      "knowledge": 3
+    },
+    {
+      "name": "docker-compose",
+      "knowledge": 3
+    },
+    {
+      "name": "Git",
+      "knowledge": 2
+    },
+    {
+      "name": "HTML5",
+      "knowledge": 2
+    },
+    {
+      "name": "Hyper-V",
+      "knowledge": 2
+    },
+    {
+      "name": "JavaScript",
+      "knowledge": 2
+    },
+    {
+      "name": "IntelliJ IDEA",
+      "knowledge": 1
+    },
+    {
+      "name": "Kotlin",
+      "knowledge": 3
+    },
+    {
+      "name": "Linux",
+      "knowledge": 1
+    },
+    {
+      "name": "MariaDB",
+      "knowledge": 2
+    },
+    {
+      "name": "nano",
+      "knowledge": 1
+    },
+    {
+      "name": "PowerShell",
+      "knowledge": 0
+    },
+    {
+      "name": "React",
+      "knowledge": 0
+    },
+    {
+      "name": "Ruby",
+      "knowledge": 3
+    },
+    {
+      "name": "Ruby on Rails",
+      "knowledge": 3
+    },
+    {
+      "name": "Software Architecture",
+      "knowledge": 1
+    },
+    {
+      "name": "Spring Framework",
+      "knowledge": 2
+    },
+    {
+      "name": "SQL",
+      "knowledge": 1
+    },
+    {
+      "name": "SCSS",
+      "knowledge": 1
+    },
+    {
+      "name": "TypeScript",
+      "knowledge": 2
+    },
+    {
+      "name": "Vue.js",
+      "knowledge": 1
+    }
+  ]
+}

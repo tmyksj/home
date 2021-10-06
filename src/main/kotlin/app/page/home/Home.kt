@@ -2,6 +2,7 @@ package app.page.home
 
 import app.component.dom.bookList
 import app.component.dom.repositoryList
+import app.component.dom.skillSet
 import app.css.Color
 import app.css.Layout
 import kotlinx.css.*
@@ -183,6 +184,46 @@ class Home : RComponent<HomeRProps, HomeRState>() {
                 bookList {
                     attrs.n = 3
                 }
+            }
+        }
+
+        styledSection {
+            css {
+                backgroundColor = Color.neutralDark
+                color = Color.neutralLighter
+            }
+
+            styledDiv {
+                css {
+                    margin(vertical = 0.rem, horizontal = LinearDimension.auto)
+                    maxWidth = Layout.extraLarge
+                    padding(vertical = 10.vh, horizontal = 1.rem)
+                }
+
+                styledH1 {
+                    css {
+                        fontSize = 1.5.rem
+                        marginBottom = 0.5.rem
+                        marginTop = 1.rem
+                    }
+
+                    styledSpan {
+                        css {
+                            color = Color.neutralLighter
+                        }
+                        +"Skills"
+                    }
+                }
+
+                styledP {
+                    css {
+                        margin(vertical = 0.5.rem, horizontal = 0.rem)
+                    }
+
+                    +"スキルセットです。"
+                }
+
+                skillSet { }
             }
         }
     }
