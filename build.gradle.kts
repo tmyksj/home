@@ -16,6 +16,7 @@ dependencies {
     implementation("org.jetbrains.kotlin-wrappers:kotlin-styled:5.3.0-pre.206-kotlin-1.5.10")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2-native-mt")
     implementation(npm("@fluentui/react", "~8.34.2"))
+    implementation(npm("d3-hierarchy", "~3.0.1"))
 }
 
 kotlin {
