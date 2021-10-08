@@ -1,10 +1,7 @@
 package app
 
 import app.css.Color
-import app.page.dom.bookList
-import app.page.dom.home
-import app.page.dom.notFound
-import app.page.dom.repositoryList
+import app.page.dom.*
 import kotlinx.browser.document
 import kotlinx.browser.window
 import kotlinx.css.*
@@ -60,6 +57,7 @@ fun main() {
                     route(path = arrayOf("/"), exact = true) { home { } }
                     route(path = arrayOf("/books"), exact = true) { bookList { } }
                     route(path = arrayOf("/repositories"), exact = true) { repositoryList { } }
+                    route(path = arrayOf("/skills"), exact = true) { skillSet { } }
                     route(path = arrayOf("/")) { notFound { } }
                 }
             }

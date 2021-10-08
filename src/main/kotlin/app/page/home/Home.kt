@@ -207,11 +207,13 @@ class Home : RComponent<HomeRProps, HomeRState>() {
                         marginTop = 1.rem
                     }
 
-                    styledSpan {
-                        css {
-                            color = Color.neutralLighter
+                    routeLink(to = "/skills") {
+                        styledSpan {
+                            css {
+                                color = Color.neutralLighter
+                            }
+                            +"Skills"
                         }
-                        +"Skills"
                     }
                 }
 
@@ -223,7 +225,9 @@ class Home : RComponent<HomeRProps, HomeRState>() {
                     +"スキルセットです。"
                 }
 
-                skillSet { }
+                skillSet {
+                    attrs.dark = true
+                }
             }
         }
     }

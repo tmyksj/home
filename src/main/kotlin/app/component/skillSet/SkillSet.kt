@@ -104,13 +104,23 @@ class SkillSet : RComponent<SkillSetRProps, SkillSetRState>() {
     }
 
     private fun color(knowledge: Int): kotlinx.css.Color {
-        return listOf(
-            Color.themeDarker,
-            Color.themeDarkAlt,
-            Color.themeSecondary,
-            Color.themeLight,
-            Color.themeLighterAlt,
-        )[knowledge]
+        return if (props.dark == true) {
+            listOf(
+                Color.themeDarker,
+                Color.themeDarkAlt,
+                Color.themeSecondary,
+                Color.themeLight,
+                Color.themeLighterAlt,
+            )[knowledge]
+        } else {
+            listOf(
+                Color.themeLight,
+                Color.themeTertiary,
+                Color.themeSecondary,
+                Color.themeDarkAlt,
+                Color.themeDarker,
+            )[knowledge]
+        }
     }
 
     private fun fontSize(): Int {
