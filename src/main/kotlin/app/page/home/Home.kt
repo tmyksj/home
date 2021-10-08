@@ -129,6 +129,7 @@ class Home : RComponent<HomeRProps, HomeRState>() {
                             css {
                                 color = Color.neutralLighter
                             }
+
                             +"Repositories"
                         }
                     }
@@ -168,6 +169,7 @@ class Home : RComponent<HomeRProps, HomeRState>() {
                             css {
                                 color = Color.neutralPrimary
                             }
+
                             +"Books"
                         }
                     }
@@ -212,6 +214,7 @@ class Home : RComponent<HomeRProps, HomeRState>() {
                             css {
                                 color = Color.neutralLighter
                             }
+
                             +"Skills"
                         }
                     }
