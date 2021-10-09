@@ -35,7 +35,7 @@ class BookList : RComponent<BookListRProps, BookListRState>() {
                     margin(vertical = 3.rem, horizontal = 0.rem)
                 }
 
-                key = it.title
+                key = it.name
 
                 styledDiv {
                     css {
@@ -49,7 +49,7 @@ class BookList : RComponent<BookListRProps, BookListRState>() {
                             margin(all = 0.rem)
                         }
 
-                        +it.title
+                        +it.name
                     }
 
                     styledSpan {

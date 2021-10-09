@@ -17,7 +17,7 @@ class BookService {
 
             BookDto(
                 isbn = book.isbn as String,
-                title = book.title as String,
+                name = book.name as String,
                 authorList = authors.map { it as String },
                 hrefNdl = book.hrefNdl as String,
                 hrefOfficial = book.hrefOfficial as String?,

@@ -4,7 +4,7 @@ data class BookDto(
 
     val isbn: String,
 
-    val title: String,
+    val name: String,
 
     val authorList: List<String>,
 
