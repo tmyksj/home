@@ -1,7 +1,7 @@
-package app.page.repositoryList
+package app.page.skillSet
 
 import app.component.dom.defaultHeader
-import app.component.dom.repositoryList
+import app.component.dom.skillSet
 import app.css.Layout
 import kotlinx.css.*
 import react.RBuilder
@@ -11,7 +11,7 @@ import styled.styledH1
 import styled.styledP
 import styled.styledSection
 
-class RepositoryList : RComponent<RepositoryListRProps, RepositoryListRState>() {
+class SkillSetRComponent : RComponent<SkillSetRProps, SkillSetRState>() {
 
     override fun RBuilder.render() {
         defaultHeader { }
@@ -30,7 +30,7 @@ class RepositoryList : RComponent<RepositoryListRProps, RepositoryListRState>() 
                     marginTop = 1.rem
                 }
 
-                +"Repositories"
+                +"Skills"
             }
 
             styledP {
@@ -38,10 +38,10 @@ class RepositoryList : RComponent<RepositoryListRProps, RepositoryListRState>() 
                     margin(vertical = 0.5.rem, horizontal = 0.rem)
                 }
 
-                +"個人で開発しているソフトウェアのリポジトリです。"
+                +"スキルセットです。"
             }
 
-            repositoryList { }
+            skillSet { }
         }
     }
 

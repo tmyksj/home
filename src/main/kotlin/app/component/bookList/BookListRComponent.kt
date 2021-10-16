@@ -15,7 +15,7 @@ import react.dom.div
 import react.setState
 import styled.*
 
-class BookList : RComponent<BookListRProps, BookListRState>() {
+class BookListRComponent : RComponent<BookListRProps, BookListRState>() {
 
     override fun BookListRState.init() {
         val coroutineScope: CoroutineScope = MainScope()

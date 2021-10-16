@@ -16,7 +16,7 @@ import react.dom.div
 import react.setState
 import styled.*
 
-class RepositoryList : RComponent<RepositoryListRProps, RepositoryListRState>() {
+class RepositoryListRComponent : RComponent<RepositoryListRProps, RepositoryListRState>() {
 
     override fun RepositoryListRState.init() {
         val coroutineScope: CoroutineScope = MainScope()

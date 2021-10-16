@@ -21,7 +21,7 @@ import react.dom.div
 import react.dom.svg
 import react.dom.tag
 
-class SkillSet : RComponent<SkillSetRProps, SkillSetRState>() {
+class SkillSetRComponent : RComponent<SkillSetRProps, SkillSetRState>() {
 
     private val rReadableRef: RReadableRef<HTMLElement> = createRef()
 

@@ -7,7 +7,7 @@ import react.RComponent
 import react.router.dom.routeLink
 import styled.*
 
-class DefaultHeader : RComponent<DefaultHeaderRProps, DefaultHeaderRState>() {
+class DefaultHeaderRComponent : RComponent<DefaultHeaderRProps, DefaultHeaderRState>() {
 
     override fun RBuilder.render() {
         styledHeader {

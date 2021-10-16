@@ -1,7 +1,7 @@
-package app.page.bookList
+package app.page.repositoryList
 
-import app.component.dom.bookList
 import app.component.dom.defaultHeader
+import app.component.dom.repositoryList
 import app.css.Layout
 import kotlinx.css.*
 import react.RBuilder
@@ -11,7 +11,7 @@ import styled.styledH1
 import styled.styledP
 import styled.styledSection
 
-class BookList : RComponent<BookListRProps, BookListRState>() {
+class RepositoryListRComponent : RComponent<RepositoryListRProps, RepositoryListRState>() {
 
     override fun RBuilder.render() {
         defaultHeader { }
@@ -30,7 +30,7 @@ class BookList : RComponent<BookListRProps, BookListRState>() {
                     marginTop = 1.rem
                 }
 
-                +"Books"
+                +"Repositories"
             }
 
             styledP {
@@ -38,10 +38,10 @@ class BookList : RComponent<BookListRProps, BookListRState>() {
                     margin(vertical = 0.5.rem, horizontal = 0.rem)
                 }
 
-                +"これまでに読んだ本のリストです。"
+                +"個人で開発しているソフトウェアのリポジトリです。"
             }
 
-            bookList { }
+            repositoryList { }
         }
     }
 

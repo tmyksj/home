@@ -7,7 +7,7 @@ import react.dom.p
 import styled.css
 import styled.styledDiv
 
-class NotFound : RComponent<NotFoundRProps, NotFoundRState>() {
+class NotFoundRComponent : RComponent<NotFoundRProps, NotFoundRState>() {
 
     override fun RBuilder.render() {
         styledDiv {

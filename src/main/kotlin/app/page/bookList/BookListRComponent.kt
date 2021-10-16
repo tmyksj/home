@@ -1,7 +1,7 @@
-package app.page.skillSet
+package app.page.bookList
 
+import app.component.dom.bookList
 import app.component.dom.defaultHeader
-import app.component.dom.skillSet
 import app.css.Layout
 import kotlinx.css.*
 import react.RBuilder
@@ -11,7 +11,7 @@ import styled.styledH1
 import styled.styledP
 import styled.styledSection
 
-class SkillSet : RComponent<SkillSetRProps, SkillSetRState>() {
+class BookListRComponent : RComponent<BookListRProps, BookListRState>() {
 
     override fun RBuilder.render() {
         defaultHeader { }
@@ -30,7 +30,7 @@ class SkillSet : RComponent<SkillSetRProps, SkillSetRState>() {
                     marginTop = 1.rem
                 }
 
-                +"Skills"
+                +"Books"
             }
 
             styledP {
@@ -38,10 +38,10 @@ class SkillSet : RComponent<SkillSetRProps, SkillSetRState>() {
                     margin(vertical = 0.5.rem, horizontal = 0.rem)
                 }
 
-                +"スキルセットです。"
+                +"これまでに読んだ本のリストです。"
             }
 
-            skillSet { }
+            bookList { }
         }
     }
 

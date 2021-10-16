@@ -14,7 +14,7 @@ import react.dom.section
 import react.router.dom.routeLink
 import styled.*
 
-class Home : RComponent<HomeRProps, HomeRState>() {
+class HomeRComponent : RComponent<HomeRProps, HomeRState>() {
 
     override fun RBuilder.render() {
         styledSection {
