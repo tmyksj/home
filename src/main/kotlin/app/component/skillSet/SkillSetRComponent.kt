@@ -104,7 +104,7 @@ class SkillSetRComponent : RComponent<SkillSetRProps, SkillSetRState>() {
     }
 
     private fun color(knowledge: Int): kotlinx.css.Color {
-        return if (props.dark == true) {
+        return if (props.darkMode == true) {
             listOf(
                 Color.themeDarker,
                 Color.themeDarkAlt,

@@ -4,6 +4,6 @@ import react.RProps
 
 external interface SkillSetRProps : RProps {
 
-    var dark: Boolean?
+    var darkMode: Boolean?
 
 }

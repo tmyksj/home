@@ -229,7 +229,7 @@ class HomeRComponent : RComponent<HomeRProps, HomeRState>() {
                 }
 
                 skillSet {
-                    attrs.dark = true
+                    attrs.darkMode = true
                 }
             }
         }
