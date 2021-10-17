@@ -5,7 +5,6 @@ import app.dto.BookDto
 import app.js.fluentui.react.defaultButton
 import app.js.fluentui.react.primaryButton
 import app.service.BookService
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
 import kotlinx.css.*
@@ -18,12 +17,11 @@ import styled.*
 class BookListRComponent : RComponent<BookListRProps, BookListRState>() {
 
     override fun BookListRState.init() {
-        val coroutineScope: CoroutineScope = MainScope()
+        MainScope().launch {
+            val bookDtoList: List<BookDto> = BookService().fetchAll()
 
-        coroutineScope.launch {
-            val dtoList: List<BookDto> = BookService().fetchAll()
             setState {
-                bookDtoList = dtoList
+                this.bookDtoList = bookDtoList
             }
         }
     }

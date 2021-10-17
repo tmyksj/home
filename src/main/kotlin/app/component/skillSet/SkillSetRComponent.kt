@@ -7,7 +7,6 @@ import app.js.d3.hierarchy.pack
 import app.service.SkillService
 import kotlinext.js.jsObject
 import kotlinx.browser.window
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
 import kotlinx.css.FontWeight
@@ -26,12 +25,11 @@ class SkillSetRComponent : RComponent<SkillSetRProps, SkillSetRState>() {
     private val rReadableRef: RReadableRef<HTMLElement> = createRef()
 
     override fun SkillSetRState.init() {
-        val coroutineScope: CoroutineScope = MainScope()
+        MainScope().launch {
+            val skillDtoList: List<SkillDto> = SkillService().fetchAll()
 
-        coroutineScope.launch {
-            val dtoList: List<SkillDto> = SkillService().fetchAll()
             setState {
-                skillDtoList = dtoList
+                this.skillDtoList = skillDtoList
             }
         }
     }

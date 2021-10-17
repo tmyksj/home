@@ -6,7 +6,6 @@ import app.dto.RepositoryDto
 import app.js.fluentui.react.defaultButton
 import app.js.fluentui.react.primaryButton
 import app.service.RepositoryService
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
 import kotlinx.css.*
@@ -19,12 +18,11 @@ import styled.*
 class RepositoryListRComponent : RComponent<RepositoryListRProps, RepositoryListRState>() {
 
     override fun RepositoryListRState.init() {
-        val coroutineScope: CoroutineScope = MainScope()
+        MainScope().launch {
+            val repositoryDtoList: List<RepositoryDto> = RepositoryService().fetchAll()
 
-        coroutineScope.launch {
-            val dtoList: List<RepositoryDto> = RepositoryService().fetchAll()
             setState {
-                repositoryDtoList = dtoList
+                this.repositoryDtoList = repositoryDtoList
             }
         }
     }
