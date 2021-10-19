@@ -11,16 +11,16 @@ import kotlinx.html.dom.append
 import kotlinx.html.style
 import kotlinx.html.unsafe
 import react.dom.render
-import react.router.dom.browserRouter
-import react.router.dom.route
-import react.router.dom.switch
+import react.router.dom.BrowserRouter
+import react.router.dom.Route
+import react.router.dom.Switch
 
 fun main() {
     window.addEventListener("DOMContentLoaded", {
         document.head?.append {
             style {
                 unsafe {
-                    raw(CSSBuilder().apply {
+                    raw(CssBuilder().apply {
                         rule("a") {
                             color = Color.themeDarkAlt
                             textDecoration = TextDecoration.none
@@ -52,13 +52,38 @@ fun main() {
         }
 
         render(document.querySelector("#root")) {
-            browserRouter(basename = document.head?.querySelector("base")?.getAttribute("href") ?: "") {
-                switch {
-                    route(path = arrayOf("/"), exact = true) { home { } }
-                    route(path = arrayOf("/books"), exact = true) { bookList { } }
-                    route(path = arrayOf("/repositories"), exact = true) { repositoryList { } }
-                    route(path = arrayOf("/skills"), exact = true) { skillSet { } }
-                    route(path = arrayOf("/")) { notFound { } }
+            BrowserRouter {
+                attrs.basename = document.head?.querySelector("base")?.getAttribute("href") ?: ""
+
+                Switch {
+                    Route {
+                        attrs.path = arrayOf("/")
+                        attrs.exact = true
+                        home { }
+                    }
+
+                    Route {
+                        attrs.path = arrayOf("/books")
+                        attrs.exact = true
+                        bookList { }
+                    }
+
+                    Route {
+                        attrs.path = arrayOf("/repositories")
+                        attrs.exact = true
+                        repositoryList { }
+                    }
+
+                    Route {
+                        attrs.path = arrayOf("/skills")
+                        attrs.exact = true
+                        skillSet { }
+                    }
+
+                    Route {
+                        attrs.path = arrayOf("/")
+                        notFound { }
+                    }
                 }
             }
         }

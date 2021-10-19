@@ -11,7 +11,7 @@ import styled.styledH1
 import styled.styledP
 import styled.styledSection
 
-class BookListRComponent : RComponent<BookListRProps, BookListRState>() {
+class BookListRComponent : RComponent<BookListProps, BookListState>() {
 
     override fun RBuilder.render() {
         defaultHeader { }

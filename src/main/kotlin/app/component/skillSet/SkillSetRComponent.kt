@@ -20,11 +20,11 @@ import react.dom.div
 import react.dom.svg
 import react.dom.tag
 
-class SkillSetRComponent : RComponent<SkillSetRProps, SkillSetRState>() {
+class SkillSetRComponent : RComponent<SkillSetProps, SkillSetState>() {
 
-    private val rReadableRef: RReadableRef<HTMLElement> = createRef()
+    private val refObject: RefObject<HTMLElement> = createRef()
 
-    override fun SkillSetRState.init() {
+    override fun SkillSetState.init() {
         MainScope().launch {
             val skillDtoList: List<SkillDto> = SkillService().fetchAll()
 
@@ -45,7 +45,7 @@ class SkillSetRComponent : RComponent<SkillSetRProps, SkillSetRState>() {
 
     override fun RBuilder.render() {
         div {
-            ref = rReadableRef
+            ref = refObject
 
             val skillDtoList: List<SkillDto> = state.skillDtoList ?: return@div
             val height: Double = state.height ?: return@div
@@ -131,7 +131,7 @@ class SkillSetRComponent : RComponent<SkillSetRProps, SkillSetRState>() {
     }
 
     private fun updateSize() {
-        val htmlElement: HTMLElement = rReadableRef.current ?: return
+        val htmlElement: HTMLElement = refObject.current ?: return
         val domRect: DOMRect = htmlElement.getBoundingClientRect()
 
         setState {
@@ -140,8 +140,8 @@ class SkillSetRComponent : RComponent<SkillSetRProps, SkillSetRState>() {
         }
     }
 
-    private fun RBuilder.tag(tagName: String, block: RDOMBuilder<HTMLTag>.() -> Unit): ReactElement {
-        return tag(block) {
+    private fun RBuilder.tag(tagName: String, block: RDOMBuilder<HTMLTag>.() -> Unit) {
+        tag(block) {
             HTMLTag(
                 tagName = tagName,
                 consumer = it,

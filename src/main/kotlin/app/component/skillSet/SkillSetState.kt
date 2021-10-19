@@ -1,9 +1,9 @@
 package app.component.skillSet
 
 import app.dto.SkillDto
-import react.RState
+import react.State
 
-external interface SkillSetRState : RState {
+external interface SkillSetState : State {
 
     var skillDtoList: List<SkillDto>?
 

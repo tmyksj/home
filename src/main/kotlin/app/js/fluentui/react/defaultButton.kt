@@ -3,13 +3,13 @@
 
 package app.js.fluentui.react
 
-import react.RClass
-import react.RProps
+import react.ComponentClass
+import react.Props
 
 @JsName("DefaultButton")
-external val defaultButton: RClass<DefaultButtonRProps>
+external val defaultButton: ComponentClass<DefaultButtonProps>
 
-external interface DefaultButtonRProps : RProps {
+external interface DefaultButtonProps : Props {
 
     var href: String?
 

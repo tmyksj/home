@@ -3,13 +3,13 @@
 
 package app.js.fluentui.react
 
-import react.RClass
-import react.RProps
+import react.ComponentClass
+import react.Props
 
 @JsName("PrimaryButton")
-external val primaryButton: RClass<PrimaryButtonRProps>
+external val primaryButton: ComponentClass<PrimaryButtonProps>
 
-external interface PrimaryButtonRProps : RProps {
+external interface PrimaryButtonProps : Props {
 
     var href: String?
 

@@ -11,7 +11,7 @@ import styled.styledH1
 import styled.styledP
 import styled.styledSection
 
-class RepositoryListRComponent : RComponent<RepositoryListRProps, RepositoryListRState>() {
+class RepositoryListRComponent : RComponent<RepositoryListProps, RepositoryListState>() {
 
     override fun RBuilder.render() {
         defaultHeader { }

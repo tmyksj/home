@@ -11,10 +11,10 @@ import react.RComponent
 import react.dom.a
 import react.dom.li
 import react.dom.section
-import react.router.dom.routeLink
+import react.router.dom.Link
 import styled.*
 
-class HomeRComponent : RComponent<HomeRProps, HomeRState>() {
+class HomeRComponent : RComponent<HomeProps, HomeState>() {
 
     override fun RBuilder.render() {
         styledSection {
@@ -124,7 +124,9 @@ class HomeRComponent : RComponent<HomeRProps, HomeRState>() {
                         marginTop = 1.rem
                     }
 
-                    routeLink(to = "/repositories") {
+                    Link {
+                        attrs.to = "/repositories"
+
                         styledSpan {
                             css {
                                 color = Color.neutralLighter
@@ -164,7 +166,9 @@ class HomeRComponent : RComponent<HomeRProps, HomeRState>() {
                         marginTop = 1.rem
                     }
 
-                    routeLink(to = "/books") {
+                    Link {
+                        attrs.to = "/books"
+
                         styledSpan {
                             css {
                                 color = Color.neutralPrimary
@@ -209,7 +213,9 @@ class HomeRComponent : RComponent<HomeRProps, HomeRState>() {
                         marginTop = 1.rem
                     }
 
-                    routeLink(to = "/skills") {
+                    Link {
+                        attrs.to = "/skills"
+
                         styledSpan {
                             css {
                                 color = Color.neutralLighter

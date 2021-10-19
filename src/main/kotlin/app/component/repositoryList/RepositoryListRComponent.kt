@@ -15,9 +15,9 @@ import react.dom.div
 import react.setState
 import styled.*
 
-class RepositoryListRComponent : RComponent<RepositoryListRProps, RepositoryListRState>() {
+class RepositoryListRComponent : RComponent<RepositoryListProps, RepositoryListState>() {
 
-    override fun RepositoryListRState.init() {
+    override fun RepositoryListState.init() {
         MainScope().launch {
             val repositoryDtoList: List<RepositoryDto> = RepositoryService().fetchAll()
 

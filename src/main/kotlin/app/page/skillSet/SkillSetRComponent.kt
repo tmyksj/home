@@ -11,7 +11,7 @@ import styled.styledH1
 import styled.styledP
 import styled.styledSection
 
-class SkillSetRComponent : RComponent<SkillSetRProps, SkillSetRState>() {
+class SkillSetRComponent : RComponent<SkillSetProps, SkillSetState>() {
 
     override fun RBuilder.render() {
         defaultHeader { }

@@ -4,10 +4,10 @@ import app.css.Color
 import kotlinx.css.*
 import react.RBuilder
 import react.RComponent
-import react.router.dom.routeLink
+import react.router.dom.Link
 import styled.*
 
-class DefaultHeaderRComponent : RComponent<DefaultHeaderRProps, DefaultHeaderRState>() {
+class DefaultHeaderRComponent : RComponent<DefaultHeaderProps, DefaultHeaderState>() {
 
     override fun RBuilder.render() {
         styledHeader {
@@ -25,7 +25,9 @@ class DefaultHeaderRComponent : RComponent<DefaultHeaderRProps, DefaultHeaderRSt
                     margin(all = 0.rem)
                 }
 
-                routeLink(to = "/") {
+                Link {
+                    attrs.to = "/"
+
                     styledSpan {
                         css {
                             alignItems = Align.flexEnd

@@ -14,9 +14,9 @@ import react.dom.div
 import react.setState
 import styled.*
 
-class BookListRComponent : RComponent<BookListRProps, BookListRState>() {
+class BookListRComponent : RComponent<BookListProps, BookListState>() {
 
-    override fun BookListRState.init() {
+    override fun BookListState.init() {
         MainScope().launch {
             val bookDtoList: List<BookDto> = BookService().fetchAll()
 

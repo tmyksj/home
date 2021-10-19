@@ -1,11 +1,10 @@
 package app.page.dom
 
+import app.page.bookList.BookListProps
 import app.page.bookList.BookListRComponent
-import app.page.bookList.BookListRProps
 import react.RBuilder
 import react.RHandler
-import react.ReactElement
 
-fun RBuilder.bookList(handler: RHandler<BookListRProps>): ReactElement {
-    return child(BookListRComponent::class, handler)
+fun RBuilder.bookList(handler: RHandler<BookListProps>) {
+    child(BookListRComponent::class, handler)
 }

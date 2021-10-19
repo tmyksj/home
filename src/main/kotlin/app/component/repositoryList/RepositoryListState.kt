@@ -1,9 +1,9 @@
 package app.component.repositoryList
 
 import app.dto.RepositoryDto
-import react.RState
+import react.State
 
-external interface RepositoryListRState : RState {
+external interface RepositoryListState : State {
 
     var repositoryDtoList: List<RepositoryDto>?
 

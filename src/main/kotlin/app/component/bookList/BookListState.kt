@@ -1,9 +1,9 @@
 package app.component.bookList
 
 import app.dto.BookDto
-import react.RState
+import react.State
 
-external interface BookListRState : RState {
+external interface BookListState : State {
 
     var bookDtoList: List<BookDto>?
 
