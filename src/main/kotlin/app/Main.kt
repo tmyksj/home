@@ -57,32 +57,32 @@ fun main() {
 
                 Switch {
                     Route {
-                        attrs.path = arrayOf("/")
+                        attrs.component = Home
                         attrs.exact = true
-                        home { }
+                        attrs.path = arrayOf("/")
                     }
 
                     Route {
+                        attrs.component = BookList
+                        attrs.exact = true
                         attrs.path = arrayOf("/books")
-                        attrs.exact = true
-                        bookList { }
                     }
 
                     Route {
+                        attrs.component = RepositoryList
+                        attrs.exact = true
                         attrs.path = arrayOf("/repositories")
-                        attrs.exact = true
-                        repositoryList { }
                     }
 
                     Route {
+                        attrs.component = SkillSet
+                        attrs.exact = true
                         attrs.path = arrayOf("/skills")
-                        attrs.exact = true
-                        skillSet { }
                     }
 
                     Route {
+                        attrs.component = NotFound
                         attrs.path = arrayOf("/")
-                        notFound { }
                     }
                 }
             }

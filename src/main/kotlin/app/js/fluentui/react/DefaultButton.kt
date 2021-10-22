@@ -6,10 +6,9 @@ package app.js.fluentui.react
 import react.ComponentClass
 import react.Props
 
-@JsName("PrimaryButton")
-external val primaryButton: ComponentClass<PrimaryButtonProps>
+external val DefaultButton: ComponentClass<DefaultButtonProps>
 
-external interface PrimaryButtonProps : Props {
+external interface DefaultButtonProps : Props {
 
     var href: String?
 

@@ -3,8 +3,8 @@ package app.component.repositoryList
 import app.css.Color
 import app.css.Layout
 import app.dto.RepositoryDto
-import app.js.fluentui.react.defaultButton
-import app.js.fluentui.react.primaryButton
+import app.js.fluentui.react.DefaultButton
+import app.js.fluentui.react.PrimaryButton
 import app.service.RepositoryService
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
@@ -106,7 +106,7 @@ class RepositoryListRComponent : RComponent<RepositoryListProps, RepositoryListS
                                     display = Display.inlineBlock
                                 }
 
-                                defaultButton {
+                                DefaultButton {
                                     attrs.href = it.hrefGitHub
                                     attrs.rel = "nofollow noopener noreferrer"
                                     attrs.target = "_blank"
@@ -121,7 +121,7 @@ class RepositoryListRComponent : RComponent<RepositoryListProps, RepositoryListS
                                         marginLeft = 1.rem
                                     }
 
-                                    primaryButton {
+                                    PrimaryButton {
                                         attrs.href = it
                                         attrs.rel = "nofollow noopener noreferrer"
                                         attrs.target = "_blank"

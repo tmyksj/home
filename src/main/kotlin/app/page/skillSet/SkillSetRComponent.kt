@@ -1,7 +1,7 @@
 package app.page.skillSet
 
-import app.component.dom.defaultHeader
-import app.component.dom.skillSet
+import app.component.dom.DefaultHeader
+import app.component.dom.SkillSet
 import app.css.Layout
 import kotlinx.css.*
 import react.RBuilder
@@ -14,7 +14,7 @@ import styled.styledSection
 class SkillSetRComponent : RComponent<SkillSetProps, SkillSetState>() {
 
     override fun RBuilder.render() {
-        defaultHeader { }
+        DefaultHeader { }
 
         styledSection {
             css {
@@ -41,7 +41,7 @@ class SkillSetRComponent : RComponent<SkillSetProps, SkillSetState>() {
                 +"スキルセットです。"
             }
 
-            skillSet { }
+            SkillSet { }
         }
     }
 

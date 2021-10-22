@@ -1,8 +1,8 @@
 package app.page.home
 
-import app.component.dom.bookList
-import app.component.dom.repositoryList
-import app.component.dom.skillSet
+import app.component.dom.BookList
+import app.component.dom.RepositoryList
+import app.component.dom.SkillSet
 import app.css.Color
 import app.css.Layout
 import kotlinx.css.*
@@ -145,7 +145,7 @@ class HomeRComponent : RComponent<HomeProps, HomeState>() {
                     +"個人で開発しているソフトウェアのリポジトリです。"
                 }
 
-                repositoryList {
+                RepositoryList {
                     attrs.n = 3
                 }
             }
@@ -187,7 +187,7 @@ class HomeRComponent : RComponent<HomeProps, HomeState>() {
                     +"これまでに読んだ本のリストです。"
                 }
 
-                bookList {
+                BookList {
                     attrs.n = 3
                 }
             }
@@ -234,7 +234,7 @@ class HomeRComponent : RComponent<HomeProps, HomeState>() {
                     +"スキルセットです。"
                 }
 
-                skillSet {
+                SkillSet {
                     attrs.darkMode = true
                 }
             }

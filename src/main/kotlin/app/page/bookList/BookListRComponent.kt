@@ -1,7 +1,7 @@
 package app.page.bookList
 
-import app.component.dom.bookList
-import app.component.dom.defaultHeader
+import app.component.dom.BookList
+import app.component.dom.DefaultHeader
 import app.css.Layout
 import kotlinx.css.*
 import react.RBuilder
@@ -14,7 +14,7 @@ import styled.styledSection
 class BookListRComponent : RComponent<BookListProps, BookListState>() {
 
     override fun RBuilder.render() {
-        defaultHeader { }
+        DefaultHeader { }
 
         styledSection {
             css {
@@ -41,7 +41,7 @@ class BookListRComponent : RComponent<BookListProps, BookListState>() {
                 +"これまでに読んだ本のリストです。"
             }
 
-            bookList { }
+            BookList { }
         }
     }
 

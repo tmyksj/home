@@ -1,7 +1,7 @@
 package app.page.repositoryList
 
-import app.component.dom.defaultHeader
-import app.component.dom.repositoryList
+import app.component.dom.DefaultHeader
+import app.component.dom.RepositoryList
 import app.css.Layout
 import kotlinx.css.*
 import react.RBuilder
@@ -14,7 +14,7 @@ import styled.styledSection
 class RepositoryListRComponent : RComponent<RepositoryListProps, RepositoryListState>() {
 
     override fun RBuilder.render() {
-        defaultHeader { }
+        DefaultHeader { }
 
         styledSection {
             css {
@@ -41,7 +41,7 @@ class RepositoryListRComponent : RComponent<RepositoryListProps, RepositoryListS
                 +"個人で開発しているソフトウェアのリポジトリです。"
             }
 
-            repositoryList { }
+            RepositoryList { }
         }
     }
 

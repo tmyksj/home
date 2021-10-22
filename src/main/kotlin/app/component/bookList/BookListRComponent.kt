@@ -2,8 +2,8 @@ package app.component.bookList
 
 import app.css.Color
 import app.dto.BookDto
-import app.js.fluentui.react.defaultButton
-import app.js.fluentui.react.primaryButton
+import app.js.fluentui.react.DefaultButton
+import app.js.fluentui.react.PrimaryButton
 import app.service.BookService
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
@@ -85,7 +85,7 @@ class BookListRComponent : RComponent<BookListProps, BookListState>() {
                             display = Display.inlineBlock
                         }
 
-                        defaultButton {
+                        DefaultButton {
                             attrs.href = it.hrefNdl
                             attrs.rel = "nofollow noopener noreferrer"
                             attrs.target = "_blank"
@@ -100,7 +100,7 @@ class BookListRComponent : RComponent<BookListProps, BookListState>() {
                                 marginLeft = 1.rem
                             }
 
-                            primaryButton {
+                            PrimaryButton {
                                 attrs.href = it
                                 attrs.rel = "nofollow noopener noreferrer"
                                 attrs.target = "_blank"
