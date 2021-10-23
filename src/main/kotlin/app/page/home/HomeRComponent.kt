@@ -1,16 +1,16 @@
 package app.page.home
 
+import app.component.dom.ArticleList
 import app.component.dom.BookList
 import app.component.dom.RepositoryList
 import app.component.dom.SkillSet
 import app.css.Color
 import app.css.Layout
 import kotlinx.css.*
+import kotlinx.html.HTMLTag
 import react.RBuilder
 import react.RComponent
-import react.dom.a
-import react.dom.li
-import react.dom.section
+import react.dom.*
 import react.router.dom.Link
 import styled.*
 
@@ -100,6 +100,63 @@ class HomeRComponent : RComponent<HomeProps, HomeState>() {
 
                     attrs.alt = "identicon"
                     attrs.src = "assets/identicon.png"
+                }
+            }
+        }
+
+        styledSvg {
+            css {
+                height = 20.vh
+                width = 100.pct
+            }
+
+            attrs["preserveAspectRatio"] = "none"
+            attrs["viewBox"] = "0 0 1 1"
+
+            tag("path") {
+                attrs["d"] = "M 0 0 L 1 0 L 1 0.875 L 0.9375 0.875 C 0.625 0.875 0.5 0.5 0 0.75"
+                attrs["fill"] = Color.neutralDark
+            }
+        }
+
+        section {
+            styledDiv {
+                css {
+                    margin(vertical = 0.rem, horizontal = LinearDimension.auto)
+                    maxWidth = Layout.extraLarge
+                    padding(top = 5.vh, horizontal = 1.rem, bottom = 10.vh)
+                }
+
+                styledH1 {
+                    css {
+                        fontSize = 1.5.rem
+                        marginBottom = 0.5.rem
+                        marginTop = 1.rem
+                    }
+
+                    Link {
+                        attrs.to = "/articles"
+
+                        styledSpan {
+                            css {
+                                color = Color.neutralPrimary
+                            }
+
+                            +"Articles"
+                        }
+                    }
+                }
+
+                styledP {
+                    css {
+                        margin(vertical = 0.5.rem, horizontal = 0.rem)
+                    }
+
+                    +"やったこと／試したことをまとめた記事です。"
+                }
+
+                ArticleList {
+                    attrs.n = 3
                 }
             }
         }
@@ -238,6 +295,19 @@ class HomeRComponent : RComponent<HomeProps, HomeState>() {
                     attrs.darkMode = true
                 }
             }
+        }
+    }
+
+    private fun RBuilder.tag(tagName: String, block: RDOMBuilder<HTMLTag>.() -> Unit) {
+        tag(block) {
+            HTMLTag(
+                tagName = tagName,
+                consumer = it,
+                initialAttributes = mapOf(),
+                namespace = null,
+                inlineTag = true,
+                emptyTag = false,
+            )
         }
     }
 

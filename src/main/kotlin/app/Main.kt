@@ -63,6 +63,18 @@ fun main() {
                     }
 
                     Route {
+                        attrs.component = ArticleList
+                        attrs.exact = true
+                        attrs.path = arrayOf("/articles")
+                    }
+
+                    Route {
+                        attrs.component = Article
+                        attrs.exact = true
+                        attrs.path = arrayOf("/articles/:uuid")
+                    }
+
+                    Route {
                         attrs.component = BookList
                         attrs.exact = true
                         attrs.path = arrayOf("/books")
