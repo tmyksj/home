@@ -10,6 +10,7 @@ repositories {
 }
 
 dependencies {
+    implementation("org.jetbrains:markdown:0.2.4")
     implementation("org.jetbrains.kotlin-wrappers:kotlin-react:17.0.2-pre.258-kotlin-1.5.31")
     implementation("org.jetbrains.kotlin-wrappers:kotlin-react-dom:17.0.2-pre.258-kotlin-1.5.31")
     implementation("org.jetbrains.kotlin-wrappers:kotlin-react-router-dom:5.3.0-pre.258-kotlin-1.5.31")
