@@ -30,6 +30,66 @@ class MyComponentRComponent : RComponent<MyComponentProps, MyComponentState>() {
 val MyComponent: ComponentClass<MyComponentProps> = MyComponentRComponent::class.react
 ```
 
+### カスタムタグを利用する
+
+HTML の要素であれば、定義されたタグを利用することができます。一方、例えば SVG の要素など、宣言されていないタグを利用したいケースもあります。そのときは、タグを生成するメソッドを定義することで実現できます。
+
+```kotlin
+fun RBuilder.tag(tagName: String, block: RDOMBuilder<HTMLTag>.() -> Unit) {
+    tag(block) {
+        HTMLTag(
+            tagName = tagName,
+            consumer = it,
+            initialAttributes = mapOf(),
+            namespace = null,
+            inlineTag = true,
+            emptyTag = false,
+        )
+    }
+}
+```
+
+定義した `RBuilder.tag` は、次のように利用します。
+
+```kotlin
+tag("path") {
+    attrs["d"] = "M 1 1 L 2 1 L 2 2 L 1 2"
+}
+```
+
+### React router を利用する
+
+次は、 React router を利用する例です。
+
+```kotlin
+BrowserRouter {
+    Switch {
+        Route {
+            attrs.component = Home
+            attrs.exact = true
+            attrs.path = arrayOf("/")
+        }
+    }
+}
+```
+
+React router にある `history` 、 `location` などは `RouteComponentProps` で定義されています。 `Route` で指定される component であれば、 `.react`
+で得られる `ComponentClass<P>` で動作します。
+
+```kotlin
+external interface HomeProps : Props, RouteComponentProps
+```
+
+```kotlin
+val Home: ComponentClass<HomeProps> = HomeRComponent::class.react
+```
+
+一方、`Route` で指定しない場合は `withRouter` を使用して `ComponentClass<P>` を得ます。
+
+```kotlin
+val Home: ComponentClass<HomeProps> = withRouter(HomeRComponent::class)
+```
+
 ### @media の定義
 
 メディアクエリは `media` を使用することで実現できます。
