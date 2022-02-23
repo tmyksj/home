@@ -42,7 +42,7 @@ jobs:
 
         cp -rf ./build/distributions/* ./
         cp -rf ./build/distributions/index.html ./404.html
-        rm -rf ./build/ ./.gradle/
+        rm -rf ./build/ ./.gradle/ ./kotlin-js-store/
 
         git add --all
         git commit --allow-empty --message "[skip ci] Automated commit"
