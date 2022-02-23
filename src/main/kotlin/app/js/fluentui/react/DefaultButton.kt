@@ -3,10 +3,10 @@
 
 package app.js.fluentui.react
 
-import react.ComponentClass
+import react.FC
 import react.Props
 
-external val DefaultButton: ComponentClass<DefaultButtonProps>
+external val DefaultButton: FC<DefaultButtonProps>
 
 external interface DefaultButtonProps : Props {
 

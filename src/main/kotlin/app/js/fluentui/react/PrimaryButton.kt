@@ -4,11 +4,11 @@
 package app.js.fluentui.react
 
 import org.w3c.dom.Element
-import react.ComponentClass
+import react.FC
 import react.Props
 import react.dom.events.MouseEventHandler
 
-external val PrimaryButton: ComponentClass<PrimaryButtonProps>
+external val PrimaryButton: FC<PrimaryButtonProps>
 
 external interface PrimaryButtonProps : Props {
 

@@ -1,5 +1,5 @@
 plugins {
-    kotlin("js") version "1.5.31"
+    kotlin("js") version "1.6.10"
 }
 
 group = "org.example"
@@ -10,14 +10,14 @@ repositories {
 }
 
 dependencies {
-    implementation("org.jetbrains:markdown:0.2.4")
-    implementation("org.jetbrains.kotlin-wrappers:kotlin-react:17.0.2-pre.258-kotlin-1.5.31")
-    implementation("org.jetbrains.kotlin-wrappers:kotlin-react-dom:17.0.2-pre.258-kotlin-1.5.31")
-    implementation("org.jetbrains.kotlin-wrappers:kotlin-react-router-dom:5.3.0-pre.258-kotlin-1.5.31")
-    implementation("org.jetbrains.kotlin-wrappers:kotlin-styled:5.3.1-pre.258-kotlin-1.5.31")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2-native-mt")
-    implementation(npm("@fluentui/react", "~8.36.5"))
-    implementation(npm("d3-hierarchy", "~3.0.1"))
+    implementation("org.jetbrains:markdown:0.3.1")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-react-dom:17.0.2-pre.303-kotlin-1.6.10")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-react-legacy:17.0.2-pre.303-kotlin-1.6.10")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-react-router-dom:6.2.1-pre.303-kotlin-1.6.10")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-styled:5.3.3-pre.303-kotlin-1.6.10")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0-native-mt")
+    implementation(npm("@fluentui/react", "~8.55.3"))
+    implementation(npm("d3-hierarchy", "~3.1.1"))
 }
 
 kotlin {

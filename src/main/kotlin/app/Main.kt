@@ -1,7 +1,7 @@
 package app
 
 import app.css.Color
-import app.page.dom.*
+import app.page.*
 import kotlinx.browser.document
 import kotlinx.browser.window
 import kotlinx.css.*
@@ -10,14 +10,19 @@ import kotlinx.css.properties.TextDecoration
 import kotlinx.html.dom.append
 import kotlinx.html.style
 import kotlinx.html.unsafe
+import org.w3c.dom.Element
+import react.createElement
 import react.dom.render
+import react.router.Route
+import react.router.Routes
 import react.router.dom.BrowserRouter
-import react.router.dom.Route
-import react.router.dom.Switch
 
 fun main() {
     window.addEventListener("DOMContentLoaded", {
-        document.head?.append {
+        val head: Element = document.head ?: return@addEventListener
+        val root: Element = document.querySelector("#root") ?: return@addEventListener
+
+        head.append {
             style {
                 unsafe {
                     raw(CssBuilder().apply {
@@ -51,50 +56,44 @@ fun main() {
             }
         }
 
-        render(document.querySelector("#root")) {
+        render(root) {
             BrowserRouter {
-                attrs.basename = document.head?.querySelector("base")?.getAttribute("href") ?: ""
+                attrs.basename = head.querySelector("base")?.getAttribute("href") ?: ""
 
-                Switch {
+                Routes {
                     Route {
-                        attrs.component = Home
-                        attrs.exact = true
-                        attrs.path = arrayOf("/")
+                        attrs.element = createElement(Home)
+                        attrs.path = "/"
                     }
 
                     Route {
-                        attrs.component = ArticleList
-                        attrs.exact = true
-                        attrs.path = arrayOf("/articles")
+                        attrs.element = createElement(ArticleList)
+                        attrs.path = "/articles"
                     }
 
                     Route {
-                        attrs.component = Article
-                        attrs.exact = true
-                        attrs.path = arrayOf("/articles/:uuid")
+                        attrs.element = createElement(Article)
+                        attrs.path = "/articles/:uuid"
                     }
 
                     Route {
-                        attrs.component = BookList
-                        attrs.exact = true
-                        attrs.path = arrayOf("/books")
+                        attrs.element = createElement(BookList)
+                        attrs.path = "/books"
                     }
 
                     Route {
-                        attrs.component = RepositoryList
-                        attrs.exact = true
-                        attrs.path = arrayOf("/repositories")
+                        attrs.element = createElement(RepositoryList)
+                        attrs.path = "/repositories"
                     }
 
                     Route {
-                        attrs.component = SkillSet
-                        attrs.exact = true
-                        attrs.path = arrayOf("/skills")
+                        attrs.element = createElement(SkillSet)
+                        attrs.path = "/skills"
                     }
 
                     Route {
-                        attrs.component = NotFound
-                        attrs.path = arrayOf("/")
+                        attrs.element = createElement(NotFound)
+                        attrs.path = "/*"
                     }
                 }
             }
