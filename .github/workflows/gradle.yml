@@ -31,8 +31,6 @@ jobs:
     - name: Deploy to gh-pages
       if: ${{ success() }}
       run: |
-        rm -rf ./kotlin-js-store/
-
         git config --local author.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --local author.name "github-actions[bot]"
         git config --local committer.email "noreply@github.com"
