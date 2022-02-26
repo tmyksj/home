@@ -3,15 +3,21 @@ package app.page
 import app.component.DefaultHeader
 import app.component.RepositoryList
 import app.css.Layout
+import kotlinx.browser.document
 import kotlinx.css.*
 import react.FC
 import react.fc
+import react.useEffectOnce
 import styled.css
 import styled.styledH1
 import styled.styledP
 import styled.styledSection
 
 val RepositoryList: FC<RepositoryListProps> = fc {
+    useEffectOnce {
+        document.title = "Repositories"
+    }
+
     DefaultHeader { }
 
     styledSection {

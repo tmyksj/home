@@ -6,6 +6,7 @@ import app.component.RepositoryList
 import app.component.SkillSet
 import app.css.Color
 import app.css.Layout
+import kotlinx.browser.document
 import kotlinx.css.*
 import kotlinx.html.HTMLTag
 import react.FC
@@ -13,6 +14,7 @@ import react.RBuilder
 import react.dom.*
 import react.fc
 import react.router.dom.Link
+import react.useEffectOnce
 import styled.*
 
 val Home: FC<HomeProps> = fc {
@@ -27,6 +29,10 @@ val Home: FC<HomeProps> = fc {
                 emptyTag = false,
             )
         }
+    }
+
+    useEffectOnce {
+        document.title = "Home"
     }
 
     styledSection {

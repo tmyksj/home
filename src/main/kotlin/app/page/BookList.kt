@@ -3,15 +3,21 @@ package app.page
 import app.component.BookList
 import app.component.DefaultHeader
 import app.css.Layout
+import kotlinx.browser.document
 import kotlinx.css.*
 import react.FC
 import react.fc
+import react.useEffectOnce
 import styled.css
 import styled.styledH1
 import styled.styledP
 import styled.styledSection
 
 val BookList: FC<BookListProps> = fc {
+    useEffectOnce {
+        document.title = "Books"
+    }
+
     DefaultHeader { }
 
     styledSection {

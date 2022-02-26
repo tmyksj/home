@@ -7,6 +7,7 @@ import app.css.Color
 import app.css.Layout
 import app.dto.ArticleDto
 import app.service.ArticleService
+import kotlinx.browser.document
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
 import kotlinx.css.*
@@ -75,6 +76,8 @@ val Article: FC<ArticleProps> = fc {
             val dto: ArticleDto? = ArticleService().fetchByUuid(uuid)
             articleDto = dto
             exists = dto != null
+
+            document.title = dto?.name ?: "Not Found"
         }
     }
 
