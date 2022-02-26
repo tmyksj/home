@@ -2,9 +2,15 @@
   "articles": [
     {
       "uuid": "4ed1098c-0f1d-4ab5-bed2-bd78b1f7fbc5",
-      "name": "Kotlin/JS + React の Tips",
+      "name": "Kotlin/JS + React の Tips （ pre.258 ）",
       "createdDate": "2021-10-23",
       "lastModifiedDate": "2021-10-26"
+    },
+    {
+      "uuid": "60760a8a-f148-4360-bc21-958e9fd74153",
+      "name": "Kotlin/JS + React の Tips （ pre.303 ）",
+      "createdDate": "2022-02-26",
+      "lastModifiedDate": "2022-02-26"
     },
     {
       "uuid": "b478b88a-8bfd-47c1-b705-a33949810205",
