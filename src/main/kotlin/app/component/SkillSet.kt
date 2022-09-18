@@ -95,7 +95,12 @@ val SkillSet: FC<SkillSetProps> = fc { props ->
         val data: dynamic = pack().size(arrayOf(height, height))(
             hierarchy(
                 jso {
-                    children = skillDtoList.toTypedArray()
+                    children = skillDtoList.map {
+                        jso<dynamic> {
+                            name = it.name
+                            knowledge = it.knowledge
+                        }
+                    }.toTypedArray()
                 }
             ).sum { it ->
                 val name: String = it.name as? String ?: return@sum 0

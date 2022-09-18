@@ -11,8 +11,9 @@ import kotlinx.html.dom.append
 import kotlinx.html.style
 import kotlinx.html.unsafe
 import org.w3c.dom.Element
+import react.Props
 import react.createElement
-import react.dom.render
+import react.dom.client.createRoot
 import react.router.Route
 import react.router.Routes
 import react.router.dom.BrowserRouter
@@ -56,7 +57,7 @@ fun main() {
             }
         }
 
-        render(root) {
+        createRoot(root).render(createElement<Props> {
             BrowserRouter {
                 attrs.basename = head.querySelector("base")?.getAttribute("href") ?: ""
 
@@ -97,6 +98,6 @@ fun main() {
                     }
                 }
             }
-        }
+        })
     })
 }
