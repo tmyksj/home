@@ -1,5 +1,5 @@
 plugins {
-    kotlin("js") version "1.7.21"
+    kotlin("js") version "1.8.0"
 }
 
 group = "org.example"
@@ -27,7 +27,7 @@ kotlin {
         browser {
             commonWebpackConfig {
                 cssSupport {
-                    enabled = true
+                    enabled.set(true)
                 }
             }
         }
