@@ -3,10 +3,10 @@
 
 package app.js.fluentui.react
 
-import org.w3c.dom.Element
 import react.FC
 import react.Props
 import react.dom.events.MouseEventHandler
+import web.dom.Element
 
 external val PrimaryButton: FC<PrimaryButtonProps>
 

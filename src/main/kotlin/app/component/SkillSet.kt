@@ -5,12 +5,12 @@ import app.dto.SkillDto
 import app.js.d3.hierarchy.hierarchy
 import app.js.d3.hierarchy.pack
 import app.service.SkillService
+import js.core.jso
 import kotlinx.browser.window
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
 import kotlinx.css.FontWeight
 import kotlinx.html.HTMLTag
-import kotlinx.js.jso
 import org.w3c.dom.DOMRect
 import org.w3c.dom.HTMLElement
 import org.w3c.dom.events.Event

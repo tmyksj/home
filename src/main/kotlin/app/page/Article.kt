@@ -7,12 +7,12 @@ import app.css.Color
 import app.css.Layout
 import app.dto.ArticleDto
 import app.service.ArticleService
+import js.core.get
 import kotlinx.browser.document
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
 import kotlinx.css.*
 import kotlinx.html.unsafe
-import kotlinx.js.get
 import org.intellij.markdown.ast.ASTNode
 import org.intellij.markdown.flavours.MarkdownFlavourDescriptor
 import org.intellij.markdown.flavours.commonmark.CommonMarkFlavourDescriptor

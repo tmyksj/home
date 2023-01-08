@@ -2,7 +2,6 @@ package app
 
 import app.css.Color
 import app.page.*
-import kotlinx.browser.document
 import kotlinx.browser.window
 import kotlinx.css.*
 import kotlinx.css.properties.LineHeight
@@ -10,7 +9,6 @@ import kotlinx.css.properties.TextDecoration
 import kotlinx.html.dom.append
 import kotlinx.html.style
 import kotlinx.html.unsafe
-import org.w3c.dom.Element
 import react.Props
 import react.createElement
 import react.dom.client.createRoot
@@ -20,8 +18,8 @@ import react.router.dom.BrowserRouter
 
 fun main() {
     window.addEventListener("DOMContentLoaded", {
-        val head: Element = document.head ?: return@addEventListener
-        val root: Element = document.querySelector("#root") ?: return@addEventListener
+        val head: org.w3c.dom.Element = kotlinx.browser.document.head ?: return@addEventListener
+        val root: web.dom.Element = web.dom.document.querySelector("#root") ?: return@addEventListener
 
         head.append {
             style {
